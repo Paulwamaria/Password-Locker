@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from credentials import Credentials
 class TestUser(unittest.TestCase):
 
   def setUp(self):
@@ -13,9 +14,21 @@ class TestUser(unittest.TestCase):
     self.assertEqual(self.new_user.password, "leejones1")
 
   def test_save_userDetails(self):
-    self.new_user.test_save_userDetails()
+    self.new_user.save_userDetails()
     self.assertEqual(len(User.user_list),1)
 
+
+# testing credentials
+class TestCredentials(unittest.TestCase):
+  def setUp(self):
+    self.new_credentials = Credentials("twitter","Just Paul","@Paulenigmatico","paulwamaria@gmail.com","lee1")
+
+  def test_init(self):
+    self.assertEqual(self.new_credentials.account_type,"twitter")
+    self.assertEqual(self.new_credentials.registration_name,"Just Paul")
+    self.assertEqual(self.new_credentials.username,"@Paulenigmatico")
+    self.assertEqual(self.new_credentials.registration_email,"paulwamaria@gmail.com")
+    self.assertEqual(self.new_credentials.account_password, "lee1")
 
 if __name__=='__main__':
   unittest.main()
