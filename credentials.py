@@ -13,15 +13,24 @@ class Credentials:
         self.registration_email = registration_email
         self.account_password = account_password
 
-@classmethod
-def check_if_userExist(cls,username,password):
+    @classmethod
+    def check_if_userExist(cls,username,password):
 
-    '''
-    A method to check if the user with the entered credentials exist
-    '''
+        '''
+        A method to check if the user with the entered credentials exist
+        '''
 
-    current_user = " "
-    for user in User.users_list:
-        if user.username == userName and user.password == password:
-            current_user = user.first_name
-    return current_user
+        current_user = " "
+        for user in User.users_list:
+            if user.username == userName and user.password == password:
+                current_user = user.first_name
+        return current_user
+
+
+
+    def save_credentials(self):
+        '''
+        Function to save a newly created user credentials
+        '''
+    
+        Credentials.credentials_list.append(self)
