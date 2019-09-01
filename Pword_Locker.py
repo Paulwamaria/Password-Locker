@@ -78,16 +78,30 @@ def copy_credentials(cls, account_site):
 #main method
 def main():
     print('\n')
-    print("    *          *")
-    print(" *     *    *   * " )
-    print("*       *  *     *" )
-    print("*                *" )
-    print("*               *")
-    print(" *             *")
-    print("  *           *")
-    print("    *        * ")
-    print("     *      * ")
-    print("        ** ")
+    print("   *  *          *  *   ")
+    print(" *      *      *      * ")
+    print("*         *  *         *")
+    print("*       WELCOME        *")
+    print("*         TO           *")
+    print(" *      PASSWORD      * ")
+    print("  *      LOCKER      *  ")
+    print("   *                *   ")
+    print("     *            *     ")
+    print("       *        *       ")
+    print("          *  *          ")
     print('\n')
+    guest_name = input("What is your name please?")
+
+    print(f"Hello {guest_name}, welcome to Password Locker:")
+    print('\n')
+    while true:
+        print('\n')
+        print(r"*"*30)
+        print('\n')
+        print("Use these short codes to navigate through Password_Locker:\n ln to log in \n ca to create a new account. \n dc to display credentials. \n sc to search credentials. \n rm to remove/delete credentials. \n cc to copy credentials password" )
+        print('\n')
+        
+        short_code = input().lower()
+
 
 
