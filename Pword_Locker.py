@@ -7,11 +7,11 @@ from credentials import credentials
 from credentials import User
 
 #Create a new user
-def create_user(fname, lname, pnumber, eaddress, uname, pword):
+def create_user(f_name, l_name, p_number, e_address, u_name, p_word):
     '''
     A funtcion to create a new user.
     '''
-    new_user = User(fname, lname, pnumber, eaddress, uname, pword)
+    new_user = User(f_name, l_name, p_number, e_address, u_name, p_word)
     
     return new_user
 
@@ -102,6 +102,42 @@ def main():
         print('\n')
         
         short_code = input().lower()
+        if short_code == 'ca':
+            print("New Account")
+            print("-"*10)
+
+            print("Enter First Name ...")
+            f_name = input()
+
+            print("Enter Last Name ...")
+            l_name = input()
+
+            print("Enter Phone Number ...")
+            p_number = input()
+
+            print(" Enter Email Address ...")
+            e_address = input()
+
+            print("Do you want to input your own password or have one generated for you? \n Enter your password of choice or use short code gp to generate password. ")
+            password_choice = input()
+            if password_choice != 'gc':
+                p_word = password_choice
+
+            else:
+                print("Enter the length of the password you wish to generate eg 9 ")
+                p_length = input()
+                p_word = Credentials.generate password(p_length)
+
+                return p_word
+
+            save_save_userDetails(create_user(f_name, l_name, p_number, e_address, p_word))#Create and save new user
+            print('\n')
+            print(f"New Account for {f_name} {l_name} created.")
+            print('\n)
+
+        elif short_code = 'lg':
+            print('\n')
+            print()
 
 
 
