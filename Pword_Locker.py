@@ -74,3 +74,20 @@ def copy_credentials(cls, account_site):
     A class method to enable us to copy credentials of a given site name.
     '''
     return cls.copy_credentials(cls, account_site)
+
+#main method
+def main():
+    print('\n')
+    print("    *          *")
+    print(" *     *    *   * " )
+    print("*       *  *     *" )
+    print("*                *" )
+    print("*               *")
+    print(" *             *")
+    print("  *           *")
+    print("    *        * ")
+    print("     *      * ")
+    print("        ** ")
+    print('\n')
+
+
