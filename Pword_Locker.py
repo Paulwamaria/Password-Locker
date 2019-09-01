@@ -57,3 +57,10 @@ def find_by_account_type(cls, account_site):
     A function to search for credentials when given an account site search as google, or twitter.
     '''
     return cls.find_by_account_type(cls, account_type)
+
+@classmethod
+def copy_credentials(cls, account_site):
+    '''
+    A class method to enable us to copy credentials of a given site name.
+    '''
+    return cls.copy_credentials(cls, account_site)
