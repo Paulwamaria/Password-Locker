@@ -12,7 +12,17 @@ def create_user(fname, lname, pnumber, eaddress, uname, pword):
     A funtcion to create a new user.
     '''
     new_user = User(fname, lname, pnumber, eaddress, uname, pword)
+    
     return new_user
+
+
+#Create new credentials
+def create_credentials(at_type, at_rname, at_remail, at_uname, at_password):
+    '''
+    A funtion to create new credentials.
+    '''
+    new_credential = Credentials(at_type, at_rname, at_remail, at_uname, at_password)
+    return new_credential
 
 #save user
 def save_userDetails(contact):
