@@ -41,3 +41,19 @@ def generate_pword(pword_length):
     A funtion to generate password, combining random letters and digits
     '''
     return Credentials.generate_password(pword_length)
+
+@classmethod
+def display_credentials(cls,uname):
+    '''
+    A class method that displays all credentials of a given username.
+    '''
+
+    return cls.display_credentials(cls, uname)
+
+
+@classmethod
+def find_by_account_type(cls, account_site):
+    '''
+    A function to search for credentials when given an account site search as google, or twitter.
+    '''
+    return cls.find_by_account_type(cls, account_type)
