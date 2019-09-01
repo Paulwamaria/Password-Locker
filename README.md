@@ -12,20 +12,22 @@ The application is build by **Paul Kamau wamaria/Emryon Developers**. who is cur
 
 **BDD**
 The application allows the user to create an account
-The user can copy paste existing credentials such as twiter username and password.
+The user can copy paste existing credentials such as twitter username and password.
 The user is able to generate a password or input one of their choice.
 The user can access all their details.
 
 **Technology used**
 
-Python
+Python3.6
 
 **set up**
-follow this link:
+install python3.6
+install pyperclip
 
 **contacts**
 
 paulwamaria@gmail.com
+
 helloemryon@gmail.com
 
 Copyright (c) 2019 Paulwamaria
