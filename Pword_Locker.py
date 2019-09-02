@@ -64,7 +64,7 @@ def display_credentials(cls,uname):
     A class method that displays all credentials of a given username.
     '''
 
-    return cls.display_credentials(cls, uname)
+    return Credentials.display_credentials(cls, uname)
 
 
 @classmethod
@@ -256,15 +256,6 @@ def main():
         else:
             print("I really did'nt get that, please use the short code ")
 print('\n')
-
-
-
-
-
-
-
-
-
 
 if __name__=='__main__':
     main()

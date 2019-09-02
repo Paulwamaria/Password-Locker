@@ -5,7 +5,7 @@ from credentials import Credentials
 class TestUser(unittest.TestCase):
 
     def setUp(self):
-        self.new_user = User("Paul", "Wamaria", "0780404626", "helloemryon@gmail.com", "Paulwamaria", "leejones1")
+        self.new_user = User("Paul", "Wamaria", "0780404626", "helloemryon@gmail.com", "Paulwamaria", "leejones2")
 
     def test_init(self):
         self.assertEqual(self.new_user.first_name,"Paul")
@@ -121,6 +121,15 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(len(Credentials.credentials_list), 2)
 
+
+    def test_delete_credentials(self):
+
+        self.new_credential.save_credentials()
+        twitter = Credentials("twitter", "Just Paul","@Paulenigmatico", "paulwamaria@gmail.com","leejones1" )
+        twitter.save_credentials()
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
     
 
     def test_display_credentials(self):
@@ -159,7 +168,7 @@ class TestCredentials(unittest.TestCase):
         for credential in Credentials.user_credentials_list:
                 found_credential = Credentials.find_by_account_type(credential.account_type)
                 return pyperclip.copy(found_credential.account_password)
-        # Credentials.copy_credentials(self.new_credential.account_type)
+        Credentials.copy_credentials(self.new_credential.account_type)
         self.assertEqual('leejones2', pyperclip.paste())
         print(pyperclip.paste())
 

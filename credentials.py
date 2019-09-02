@@ -43,7 +43,7 @@ class Credentials:
         self.account_password = account_password
 
     @classmethod
-    def check_if_userExist(cls,username,password):
+    def check_if_userExist(cls,userName,password):
 
         '''
         A method to check if the user with the entered credentials exist
@@ -52,7 +52,7 @@ class Credentials:
         current_user = " "
         for user in User.users_list:
             if user.username == userName and user.password == password:
-                current_user = user.first_name
+                current_user = user.username
         return current_user
 
 
@@ -71,6 +71,12 @@ class Credentials:
     
         Credentials.credentials_list.append(self)
 
+    def delete_credentials(self):
+        '''
+        A function to delete credentials.
+        '''
+        Credentials.credentials_list.remove(self)
+
 
 
     def generate_password(string_length = 9):
@@ -79,8 +85,8 @@ class Credentials:
         '''
         password_characters = string.ascii_letters + string.digits
 
-        return ''.join(secrets.choice(password_characters) for i in range(string_length))
-        print("Your generated password is ", generate_password() )
+        return ''.join(secrets.choice(password_characters) for i in range(int(string_length)))
+        # print("Your generated password is ", generate_password() )
 
 
     @classmethod
@@ -110,7 +116,7 @@ class Credentials:
         '''
         Class method that copies a credential's info after the credential's account site is entered
         '''
-        found_credential = Credentials.find_by_account_type(account_site)
+        found_credential = cls.find_by_account_type(account_site)
         return pyperclip.copy(found_credential.account_password)
 
         
