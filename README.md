@@ -1,14 +1,15 @@
 # Password Locker
 
-Password locker is an aplication that allows a user to manage their password. The user can create an
+Password locker is an aplication that allows a user to manage their password. The application runs on the python terminal. The user can create an
 account and store their credentials. The user also has a choice to automatically generate a  password.
 
 #**link
 
+https://github.com/marynganga/Password-Locker
 
 **Developer**
 
-The application is build by **Paul Kamau wamaria/Emryon Developers**. who is currently a student at Moringa.
+The application is build by **Paul Kamau wamaria/Emryon Developers**, who is currently a student at Moringa.
 
 **BDD**
 The application allows the user to create an account
@@ -21,13 +22,16 @@ The user can access all their details.
 Python3.6
 
 **set up**
-install python3.6
-install pyperclip
+
+1. install python3.6
+1. install pip
+1. install pyperclip
+1. install xclip
 
 **contacts**
 
-paulwamaria@gmail.com
+* paulwamaria@gmail.com
 
-helloemryon@gmail.com
+* helloemryon@gmail.com
 
-Copyright (c) 2019 Paulwamaria
+* Copyright (c) 2019 Paulwamaria
