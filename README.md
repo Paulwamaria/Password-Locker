@@ -30,12 +30,14 @@ Python3.6
 
 
 **##  specs**
-|   Behaviour   |  Input |  Output
+|   Behaviour                        |  Input                                 |  Output
 
 |---------------------------------   |   :---------------------------------:  |   ------------------------------------:   |
 
 
-| Output garbage                   |    Enter Garbage                    | Output Garbage(just trying tables)  
+| Output garbage                     |    Enter Garbage                       | Output Garbage(just trying tables)  
+
+| try1                               |    try2                                |  try3
 
 
 ## Known bugs 
