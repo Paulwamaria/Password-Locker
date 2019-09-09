@@ -30,9 +30,13 @@ Python3.6
 
 
 **## specs**
+| Behaviour | Input | Output
+|--------------------------------- | :---------------------------------: | ------------------------------------: |
+
+| Output garbage                   |    Enter Garbage                    | Output Garbage(just trying tables)  
 
 
-## Known bugs
+## Known bugs 
 
 * Copying credentials is not working as expected.
 
