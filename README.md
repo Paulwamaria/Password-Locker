@@ -29,9 +29,11 @@ Python3.6
 1. install xclip
 
 
-**## specs**
-| Behaviour | Input | Output
-|--------------------------------- | :---------------------------------: | ------------------------------------: |
+**##  specs**
+|   Behaviour   |  Input |  Output
+
+|---------------------------------   |   :---------------------------------:  |   ------------------------------------:   |
+
 
 | Output garbage                   |    Enter Garbage                    | Output Garbage(just trying tables)  
 
